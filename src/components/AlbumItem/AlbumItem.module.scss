@@ -1,0 +1,24 @@
+.albumContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    .__albumItem{
+        padding: 5px;
+        border: 1px solid gray;
+        border-radius: 3px;
+        background-color: white;
+        img{
+
+            display: block;
+            background-size: contain;
+            background-repeat: no-repeat;
+            // width: 300px;
+
+            max-height: 200px;
+        }
+        
+    }
+}
