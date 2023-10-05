@@ -4,11 +4,8 @@ import ImageItem from "../../components/ImageItem";
 
 
 function PageAlbum() {
-  const [file, setFile] = useState();
-  function handleChange(e) {
-    console.log(e.target.files);
-    setFile(URL.createObjectURL(e.target.files[0]));
-}
+  // const [file, setFile] = useState();
+  
 
 
   return (
@@ -17,8 +14,7 @@ function PageAlbum() {
        {/* data.map({
         < ImageItem img={daata.img} />
        })  */}
-       <input type="file" onChange={handleChange}/>
-       <img src={file} alt="" />
+    
         < ImageItem />
         < ImageItem />
         < ImageItem />

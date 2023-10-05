@@ -1,0 +1,1 @@
+Get-ChildItem -Path *.jpg -File | foreach {$i=1}{$_ | Rename-Item -NewName "$i.jpg" ;$i++}
