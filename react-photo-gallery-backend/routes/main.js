@@ -10,6 +10,8 @@ module.exports = function(app) {
     app.get('/', (req, res) => {
         // res.end('main');
         const base = './files/';
+        const lowbase = '/files/';
+
         let path ='';
         let src = '';
 
@@ -30,12 +32,12 @@ module.exports = function(app) {
                 let src = '';
                 if (!isDir) {
                     // size = fs.statSync(base + path + '/' + item);
-                    src = base + path +'/'+ item 
+                    src = lowbase + path +'/'+ item 
                  
 
                 }
                 if (isDir) {
-                    src = base + path + item +'/' + fs.readdirSync(base + path + item)[0]
+                    src = lowbase + path + item +'/' + fs.readdirSync(base + path + item)[0]
 
                 }
                 return {

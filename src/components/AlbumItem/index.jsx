@@ -2,15 +2,20 @@ import React from "react";
 import styles from "./AlbumItem.module.scss";
 
 
-function AlbumItem() {
-
+function AlbumItem(props) {
+const {key, title, src} = props
+const lowpath = '../react-photo-gallery-background'
   return (
     <>
-      <div className={styles.albumContainer}>
+      <div id={key} className={styles.albumContainer}>
         <div className={styles.__albumItem}>
-          <img src="./images/1.jpg" alt="" />
+          {/* <img src="./images/1.jpg" alt="" /> */}
+          <img src={lowpath+src} alt="" />
+
         </div>
-        <h3>Album name</h3>
+        <h3>{title}</h3>
+        
+
         {/* <span>Lorem ipsum doller</span> */}
       </div>  
     </>

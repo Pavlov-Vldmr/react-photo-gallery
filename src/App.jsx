@@ -18,15 +18,18 @@ function App() {
        }, (error) => {}
      )
    }, []);
+   
 
 
-  
-
+  console.log(data)
   return (
-    // <PageGallery />
+
     <>
-    <PageGallery data={data}/>
-    {/* <h1>{data.result}</h1> */}
+
+    { data ? ( 
+    <PageGallery data={data} />
+      
+    ): console.log('error') }
     </>
     
   );
